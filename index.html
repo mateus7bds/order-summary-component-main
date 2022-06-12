@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<title>Frontend Mentor | Order summary card</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700;900&display=swap');
+		:root {
+			--pale-blue: hsl(225, 100%, 94%);
+			--bright-blue: hsl(245, 75%, 52%);
+			--very-pale-blue: hsl(225, 100%, 98%);
+			--desaturated-blue: hsl(224, 23%, 55%);
+			--dark-blue: hsl(223, 47%, 23%);
+		}
+		* {
+			font-family: 'Red Hat Display', sans-serif;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-size: 16px;
+			text-align: center;
+		}
+		main#conteudo-principal {
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+			background-image: url('images/pattern-background-desktop.svg');
+			background-repeat: no-repeat;
+		}
+		img#imagem-hero {
+			width: 380px;
+			border-radius: 15px 15px 0px 0px;
+		}
+		div#card-interno {
+			width: 380px;
+			padding: 3rem;
+			background-color: white;
+			border-radius: 0px 0px 15px 15px;
+		}
+		div.container-planos {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-items: center;
+			margin: 25px 0px;
+			background-color: var(--very-pale-blue);
+			border-radius: 15px;
+		}
+		div.texto-com-imagem {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-items: center;
+			justify-content: flex-start;
+			font-size: 0.9em;
+		}
+		img#imagem-icon-music {
+			width: 48px;
+			margin-right: 1rem;
+		}
+		div#botao-pagar {
+			margin-top: 2rem;
+			padding: 10px;
+			background-color: var(--bright-blue);
+			color: var(--very-pale-blue);
+			border-radius: 15px;
+			font-weight: 600;
+		}
+		div#botao-cancelar {
+			margin-top: 25px;
+			color: var(--desaturated-blue);
+			font-weight: 600;
+			color: var(--dark-blue);
+		}
+		h2#titulo {
+			font-size: 1.7em;
+			color: var(--dark-blue);
+			font-weight: 900;
+		}
+		p#texto {
+			margin-top: 25px;
+			color: var(--desaturated-blue);
+		}
+		#change {
+			color: var(--bright-blue);
+			text-decoration-line: underline;
+			font-weight: 600;
+			font-size: 0.9em;
+		}
+		#annual-plan, #valor-plano{
+			font-size: 0.9em;
+		}
+		div#valor-plano {
+			color: var(--desaturated-blue);
+		}
+		@media only screen and (max-width: 375px){
+			diV#card-interno {
+				width: 340px;
+				padding: 2rem;
+			}
+			img#imagem-hero {
+				width: 340px;
+			}
+			main#conteudo-principal {
+				background-image: url('images/pattern-background-mobile.svg');
+			}
+		}
+	</style>
+</head>
+<body>
+	<main id="conteudo-principal">
+		<img src="images/illustration-hero.svg" alt="Illustration-hero" id="imagem-hero">
+		<div id="card-interno">
+			<h2 id="titulo">Order Summary</h2>
+			<p id="texto">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+			<div class="container-planos">
+				<div class="texto-com-imagem">
+					<img src="images/icon-music.svg" alt="Icon Music" id="imagem-icon-music">
+					<div class="planos">
+						<div id="annual-plan"><strong>Annual Plan</strong></div>
+						<div id="valor-plano">$59.99/year</div>
+					</div>
+				</div>
+				<span id="change">Change</span>
+			</div>
+			<div id="botao-pagar">Proceed to Payment</div>
+			<div id="botao-cancelar">Cancel Order</div>
+		</div>
+	</main>
+</body>
+</html>
